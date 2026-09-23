@@ -1,0 +1,135 @@
+:root {
+  --paper: #F3F1E7;
+  --ink: #1F2B22;
+  --moss: #4E6E58;
+  --moss-dark: #3A5442;
+  --gold: #C9962B;
+  --line: #DAD5C4;
+  --card: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: system-ui, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 32px 16px 60px;
+}
+
+.app {
+  width: 100%;
+  max-width: 480px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0 0 4px;
+  font-weight: 800;
+}
+
+.sub {
+  color: var(--moss);
+  margin: 0 0 24px;
+  font-size: 0.95rem;
+}
+
+.add-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.add-row input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  background: var(--card);
+  color: var(--ink);
+  font-size: 1rem;
+}
+
+.add-row button {
+  background: var(--moss);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.habit {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+}
+
+.check {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid var(--moss);
+  background: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.check.done {
+  background: var(--moss);
+}
+
+.habit-name {
+  flex: 1;
+}
+
+.habit-name.done {
+  text-decoration: line-through;
+  opacity: 0.55;
+}
+
+.streak {
+  font-size: 0.85rem;
+  color: var(--gold);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.del {
+  background: none;
+  border: none;
+  color: var(--line);
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.empty {
+  text-align: center;
+  color: var(--moss);
+  padding: 40px 16px;
+}
+
+.stats {
+  display: flex;
+  gap: 16px;
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  font-size: 0.85rem;
+  color: var(--moss);
+}
